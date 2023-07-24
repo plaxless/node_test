@@ -25,6 +25,10 @@ int main(){
 	}
 	
 	cin >> real_count;
+	if(!real_count){
+		cout << party_count << "\n";
+	}
+	
 	real = vector<int> (real_count + 1, 1);
 	for(int i = 1; i <= real_count; i++){
 		cin >> real[i];
@@ -59,7 +63,6 @@ bool check(int a){
 		i = find(i);
 		if(a == i) return false;
 	}
-	index[a] = index[real[0]];
 	return true;
 }
 
